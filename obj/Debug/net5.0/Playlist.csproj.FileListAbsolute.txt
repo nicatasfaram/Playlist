@@ -162,3 +162,13 @@ C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Areas\Identity\Pages
 C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Playlists\Create.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Playlists\Delete.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Playlists\Details.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Playlists\Edit.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Playlists\Index.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Musics\Create.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Musics\Delete.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Musics\Details.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Musics\Edit.cshtml.g.cs
+C:\Users\Nicat\source\repos\Playlist\obj\Debug\net5.0\Razor\Views\Musics\Index.cshtml.g.cs
