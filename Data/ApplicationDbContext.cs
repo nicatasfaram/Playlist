@@ -12,7 +12,6 @@ namespace Playlist.Data
 
         public DbSet<User> users { get; set; }
 
-        public DbSet<Models.Playlist> playlists { get; set; }
 
         public DbSet<Models.Music> musics { get; set; }
 

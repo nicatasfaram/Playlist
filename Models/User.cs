@@ -16,7 +16,7 @@ namespace Playlist.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        public ICollection<Playlist> playlists; 
+        public ICollection<Music> playlist; 
 
 
     }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Playlist.Data;
 
 namespace Playlist.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211226200543_playlistUpdate3")]
+    partial class playlistUpdate3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -173,13 +175,34 @@ namespace Playlist.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("PlaylistId")
+                        .HasColumnType("int");
+
                     b.Property<string>("RealiseData")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MusicId");
 
+                    b.HasIndex("PlaylistId");
+
                     b.ToTable("musics");
+                });
+
+            modelBuilder.Entity("Playlist.Models.Playlist", b =>
+                {
+                    b.Property<int>("PlaylistId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PlaylistId");
+
+                    b.ToTable("playlists");
                 });
 
             modelBuilder.Entity("Playlist.Models.User", b =>
@@ -302,6 +325,18 @@ namespace Playlist.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Playlist.Models.Music", b =>
+                {
+                    b.HasOne("Playlist.Models.Playlist", null)
+                        .WithMany("MusicId")
+                        .HasForeignKey("PlaylistId");
+                });
+
+            modelBuilder.Entity("Playlist.Models.Playlist", b =>
+                {
+                    b.Navigation("MusicId");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,8 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
 }
+
+@model IEnumerable<Music>
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+@*@foreach (var user in Model)
+    {
+
+    }*@
+
+<table class="table">
+    @if(User.Identity.IsAuthenticated){
+
+
+        @foreach (var music in Model)
+        {
+            <tr>
+                <td>@music.Name</td>
+                <td>@music.Album</td>
+                <td>@music.Artist</td>
+                <td>@music.Link</td>
+
+
+            </tr>
+        }
+    }
+
+
+</table>
